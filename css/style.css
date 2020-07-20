@@ -1,1 +1,101 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+:root {
+  font-size: 30px;
+}
+
+.header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+}
+
+.header .header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.header .header-nav .header-nav__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 0.8rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.header .header-nav .header-nav__inner .header-nav__item {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.header .header-nav .inview.header-nav__inner {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.global-container {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.global-container .hamburger-menu {
+  position: fixed;
+  right: 0;
+  top: 30px;
+}
+
+.global-container .hamburger-menu > span {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: black;
+  margin-bottom: 12px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.global-container .hamburger-menu > span:last-child {
+  margin-bottom: 0;
+}
+
+.menu-open.global-container {
+  -webkit-transform: translate(-50px, 50px);
+          transform: translate(-50px, 50px);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.menu-open.global-container .hamburger-menu > span:nth-child(1) {
+  -webkit-transition-delay: 70ms;
+          transition-delay: 70ms;
+  -webkit-transform: translateY(15px) rotate(-135deg);
+          transform: translateY(15px) rotate(-135deg);
+}
+
+.menu-open.global-container .hamburger-menu > span:nth-child(2) {
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  -webkit-transform: translateX(-40px) scaleX(0);
+          transform: translateX(-40px) scaleX(0);
+}
+
+.menu-open.global-container .hamburger-menu > span:nth-child(3) {
+  -webkit-transition-delay: 140ms;
+          transition-delay: 140ms;
+  -webkit-transform: translateY(-16px) rotate(135deg);
+          transform: translateY(-16px) rotate(135deg);
+}
+/*# sourceMappingURL=style.css.map */
