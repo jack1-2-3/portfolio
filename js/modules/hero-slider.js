@@ -1,9 +1,11 @@
+// ヒーロースライダー
 class HeroSlider {
     constructor(el) {
         this.el = el;
         this.swiper = this._initSwiper();
     }
 
+    // swiperの初期設定
     _initSwiper() {
         return new Swiper(this.el, {
             // Optional parameters
@@ -22,16 +24,22 @@ class HeroSlider {
         });
     }
 
+    // スタートメソッド
     start(options = {}) {
         options = Object.assign({
             delay: 4000,
             disableOnInteraction: false
         }, options);
         
+        // swiper内のparams.autoplayの初期設定
         this.swiper.params.autoplay = options;
-        this.swiper.autoplay.start();
+        // swiper内のstart()メソッド
+        this.swiper.autoplay.start(); 
     }
+
+    // ストップメソッド
     stop() {
-        this.swiper.autoplay.stop();
+        // swiper内のstop()メソッド
+        this.swiper.autoplay.stop(); 
     }
 }
