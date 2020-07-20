@@ -2,7 +2,8 @@
 class MobileMenu {
     constructor() {
         this.headerNavInner = document.querySelector('.header-nav__inner');
-        this.globalContainer = document.querySelector('.global-container');
+        this.globalContainer = document.querySelector('#global-container');
+        this.cover = document.querySelector('.mobile-menu-cover');
         this.hamburgerMenu = document.querySelector('.hamburger-menu');
         this.eventType = this._getEventType();
         this.init = this._init();
@@ -17,6 +18,10 @@ class MobileMenu {
     // ハンバーガーメニューをタッチまたはクリックした時に'menu-open'クラスをヘッダーナビゲーションインナーとグローバルコンテナに付与
     _init() {
         this.hamburgerMenu.addEventListener(this.eventType, () => {
+            this.headerNavInner.classList.toggle('menu-open');
+            this.globalContainer.classList.toggle('menu-open');
+        })
+        this.cover.addEventListener(this.eventType, () => {
             this.headerNavInner.classList.toggle('menu-open');
             this.globalContainer.classList.toggle('menu-open');
         })
