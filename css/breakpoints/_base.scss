@@ -47,8 +47,21 @@ body {
 }
 
 // グローバルコンテナ
-.global-container {
+#global-container {
     transition: 0.5s;
+    position: relative;
+
+    // ハンバーガーメニューを開いたときのカバー
+    .mobile-menu-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        background-color: rgba(#000, 0.3);
+        z-index: 10;
+    }
 
     // ハンバーガーメニュー
     .hamburger-menu {
@@ -70,13 +83,18 @@ body {
             margin-bottom: 0;
         }
     }
-
 }
 
+
 // メニューオープン時のグローバルコンテナ
-.menu-open.global-container {
+.menu-open#global-container {
     transform: translate(-150px, 80px);
     transform-origin: top right;
+
+    // ハンバーガーメニューを開いたときのカバー
+    .mobile-menu-cover {
+        visibility: visible;
+    }
 
     // ハンバーガーメニューのクリックアニメーション
         .hamburger-menu {
@@ -93,5 +111,4 @@ body {
             transform: translateY(-16px) rotate(135deg);
         }
     }
-
 }

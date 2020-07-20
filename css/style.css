@@ -1,5 +1,80 @@
+.hero-slider .swiper-container {
+  position: relative;
+  z-index: 0;
+}
+
+.hero-slider .swiper-container .scroll-induction {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  width: 60px;
+  height: 80px;
+  -webkit-transform: translate(-20%, -50%);
+          transform: translate(-20%, -50%);
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.hero-slider .swiper-container .scroll-induction img {
+  -webkit-animation-name: kf-arrow;
+          animation-name: kf-arrow;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  position: absolute;
+  top: -20px;
+}
+
+.hero-slider .swiper-container .scroll-induction h3 {
+  right: 0;
+  -webkit-transform: rotate(90deg) translate(30px, 10px);
+          transform: rotate(90deg) translate(30px, 10px);
+  color: white;
+  font-size: 0.8rem;
+}
+
+.hero-slider .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 100%;
+}
+
+@-webkit-keyframes kf-arrow {
+  0% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+}
+
+@keyframes kf-arrow {
+  0% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+}
+
 :root {
   font-size: 30px;
+}
+
+body {
+  background-color: white;
 }
 
 .header {
@@ -40,24 +115,37 @@
   margin-right: 20px;
 }
 
-.header .header-nav .inview.header-nav__inner {
+.header .header-nav .menu-open.header-nav__inner {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
 }
 
-.global-container {
+#global-container {
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  position: relative;
 }
 
-.global-container .hamburger-menu {
+#global-container .mobile-menu-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+#global-container .hamburger-menu {
   position: fixed;
-  right: 0;
-  top: 30px;
+  right: 20px;
+  top: 20px;
+  z-index: 3;
 }
 
-.global-container .hamburger-menu > span {
+#global-container .hamburger-menu > span {
   display: block;
   width: 40px;
   height: 3px;
@@ -67,32 +155,36 @@
   transition: 0.5s ease;
 }
 
-.global-container .hamburger-menu > span:last-child {
+#global-container .hamburger-menu > span:last-child {
   margin-bottom: 0;
 }
 
-.menu-open.global-container {
-  -webkit-transform: translate(-50px, 50px);
-          transform: translate(-50px, 50px);
+.menu-open#global-container {
+  -webkit-transform: translate(-150px, 80px);
+          transform: translate(-150px, 80px);
   -webkit-transform-origin: top right;
           transform-origin: top right;
 }
 
-.menu-open.global-container .hamburger-menu > span:nth-child(1) {
+.menu-open#global-container .mobile-menu-cover {
+  visibility: visible;
+}
+
+.menu-open#global-container .hamburger-menu > span:nth-child(1) {
   -webkit-transition-delay: 70ms;
           transition-delay: 70ms;
   -webkit-transform: translateY(15px) rotate(-135deg);
           transform: translateY(15px) rotate(-135deg);
 }
 
-.menu-open.global-container .hamburger-menu > span:nth-child(2) {
+.menu-open#global-container .hamburger-menu > span:nth-child(2) {
   -webkit-transition-delay: 0ms;
           transition-delay: 0ms;
   -webkit-transform: translateX(-40px) scaleX(0);
           transform: translateX(-40px) scaleX(0);
 }
 
-.menu-open.global-container .hamburger-menu > span:nth-child(3) {
+.menu-open#global-container .hamburger-menu > span:nth-child(3) {
   -webkit-transition-delay: 140ms;
           transition-delay: 140ms;
   -webkit-transform: translateY(-16px) rotate(135deg);
