@@ -1,4 +1,4 @@
-// ヒーロースライダー
+// ヒーロースライダークラス
 class HeroSlider {
     constructor(el) {
         this.el = el;
