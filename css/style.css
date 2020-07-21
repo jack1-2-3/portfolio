@@ -77,8 +77,8 @@ body {
   background-color: white;
 }
 
-.mg-top, #global-container #profile {
-  margin-top: 20px;
+.mg-top, #global-container .main-contents #profile, #global-container .main-contents #skills {
+  margin-top: 50px;
 }
 
 .header {
@@ -163,13 +163,18 @@ body {
   margin-bottom: 0;
 }
 
-#global-container #profile .main-title {
+#global-container .main-contents {
+  width: 90%;
+  margin: 0 5%;
+}
+
+#global-container .main-contents #profile .main-title {
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 20px;
 }
 
-#global-container #profile .profile-inner {
+#global-container .main-contents #profile .profile-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,24 +182,47 @@ body {
       justify-content: space-around;
 }
 
-#global-container #profile .profile-inner .profile-icon__wrap {
+#global-container .main-contents #profile .profile-inner .profile-icon__wrap {
   -ms-flex-preferred-size: calc(40% - 10px);
       flex-basis: calc(40% - 10px);
 }
 
-#global-container #profile .profile-inner .profile-icon__wrap img {
+#global-container .main-contents #profile .profile-inner .profile-icon__wrap img {
   width: 100%;
   border-radius: 50%;
 }
 
-#global-container #profile .profile-inner .profile-list {
+#global-container .main-contents #profile .profile-inner .profile-list {
   -ms-flex-preferred-size: calc(60% - 10px);
       flex-basis: calc(60% - 10px);
 }
 
-#global-container #profile .profile-inner .profile-list .profile-detail {
+#global-container .main-contents #profile .profile-inner .profile-list .profile-detail {
   font-size: 0.6rem;
   margin-bottom: 10px;
+}
+
+#global-container .main-contents #skills .main-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#global-container .main-contents #skills .skills-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#global-container .main-contents #skills .skills-container .skills-item {
+  -ms-flex-preferred-size: calc(100% / 3 - 10px);
+      flex-basis: calc(100% / 3 - 10px);
+}
+
+#global-container .main-contents #skills .skills-container .skills-item img {
+  width: 100%;
 }
 
 .menu-open#global-container {

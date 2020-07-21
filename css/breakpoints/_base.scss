@@ -13,7 +13,7 @@ body {
 }
 
 .mg-top {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 // ヘッダー
@@ -88,41 +88,72 @@ body {
         }
     }
 
-    // プロフィール
-    #profile {
-        @extend .mg-top;
+    // メインコンテンツ
+    .main-contents {
+        width: 90%;
+        margin: 0 5%;
 
-        // メインタイトル
-        .main-title {
-            font-size: 1.5rem;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-
-        // プロフィールインナー
-        .profile-inner {
-            display: flex;
-            justify-content: space-around;
-
-            .profile-icon__wrap {
-                flex-basis: calc(40% - 10px);
-
-                img {
-                    width: 100%;
-                    border-radius: 50%;
+        // プロフィール
+        #profile {
+            @extend .mg-top;
+    
+            // メインタイトル
+            .main-title {
+                font-size: 1.5rem;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+    
+            // プロフィールインナー
+            .profile-inner {
+                display: flex;
+                justify-content: space-around;
+    
+                .profile-icon__wrap {
+                    flex-basis: calc(40% - 10px);
+    
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+    
+                .profile-list {
+                    flex-basis: calc(60% - 10px);
+    
+                    .profile-detail {
+                        font-size: 0.6rem;
+                        margin-bottom: 10px;
+                    }
                 }
             }
-
-            .profile-list {
-                flex-basis: calc(60% - 10px);
-
-                .profile-detail {
-                    font-size: 0.6rem;
-                    margin-bottom: 10px;
+        }
+    
+            // スキル
+            #skills {
+                @extend .mg-top;
+    
+                .main-title {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+        
+                // スキル欄
+                .skills-container {
+                    display: flex;
+                    justify-content: space-around;
+        
+                    .skills-item {
+                        flex-basis: calc(100% / 3 - 10px);
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
                 }
             }
-        }
     }
 }
 
