@@ -233,6 +233,36 @@ body {
                 }
             }
         }
+
+        // ポートフォリオ
+        #portfolio {
+            width: 90%;
+            margin: 5%;
+            @extend .mg-lr;
+
+            // ポートフォリオインナー
+            .portfolio-inner {
+                // メインタイトル
+                .main-title {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    @extend .mg-sm;
+                }
+
+                // サブタイトル
+                .sub-title {
+                    font-size: 1rem;
+                    @extend .mg-sm;
+                }
+
+                // ポートフォリオの画像
+                .portfolio-image {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
 
