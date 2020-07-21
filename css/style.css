@@ -77,6 +77,10 @@ body {
   background-color: white;
 }
 
+.mg-top, #global-container #profile {
+  margin-top: 20px;
+}
+
 .header {
   position: fixed;
   right: 0;
@@ -157,6 +161,40 @@ body {
 
 #global-container .hamburger-menu > span:last-child {
   margin-bottom: 0;
+}
+
+#global-container #profile .main-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#global-container #profile .profile-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#global-container #profile .profile-inner .profile-icon__wrap {
+  -ms-flex-preferred-size: calc(40% - 10px);
+      flex-basis: calc(40% - 10px);
+}
+
+#global-container #profile .profile-inner .profile-icon__wrap img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#global-container #profile .profile-inner .profile-list {
+  -ms-flex-preferred-size: calc(60% - 10px);
+      flex-basis: calc(60% - 10px);
+}
+
+#global-container #profile .profile-inner .profile-list .profile-detail {
+  font-size: 0.6rem;
+  margin-bottom: 10px;
 }
 
 .menu-open#global-container {
