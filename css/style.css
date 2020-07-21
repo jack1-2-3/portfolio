@@ -77,11 +77,11 @@ body {
   background-color: white;
 }
 
-.mg-lr, #global-container .main-contents #profile, #global-container .main-contents #skills, #global-container .main-contents #works, #global-container .main-contents #portfolio {
+.mg-lr, #global-container .main-contents #profile, #global-container .main-contents #skills, #global-container .main-contents #works, #global-container .main-contents #portfolio, #global-container .main-contents #contact {
   margin: 50px 0;
 }
 
-.mg-sm, #global-container .main-contents #works .works-inner .works-list .works-container .works-detail, #global-container .main-contents #portfolio .portfolio-inner .main-title, #global-container .main-contents #portfolio .portfolio-inner .sub-title {
+.mg-sm, #global-container .main-contents #works .works-inner .works-list .works-container .works-detail, #global-container .main-contents #portfolio .portfolio-inner .main-title, #global-container .main-contents #portfolio .portfolio-inner .sub-title, #global-container .main-contents #contact .contact-inner .main-title {
   margin: 30px 0;
 }
 
@@ -317,6 +317,43 @@ body {
 }
 
 #global-container .main-contents #portfolio .portfolio-inner .portfolio-image img {
+  width: 100%;
+}
+
+#global-container .main-contents #contact {
+  background-color: #f8e4e4;
+  padding: 10px 0;
+}
+
+#global-container .main-contents #contact .contact-inner {
+  width: 90%;
+  margin: 5%;
+}
+
+#global-container .main-contents #contact .contact-inner .main-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#global-container .main-contents #contact .contact-inner .contact-induction {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+#global-container .main-contents #contact .contact-inner .contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#global-container .main-contents #contact .contact-inner .contact-list .contact-method {
+  -ms-flex-preferred-size: calc(100% / 3 - 30px);
+      flex-basis: calc(100% / 3 - 30px);
+}
+
+#global-container .main-contents #contact .contact-inner .contact-list .contact-method a img {
   width: 100%;
 }
 

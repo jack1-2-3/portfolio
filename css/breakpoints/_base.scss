@@ -263,6 +263,46 @@ body {
                 }
             }
         }
+
+        // コンタクト
+        #contact {
+            background-color: #f8e4e4;
+            padding: 10px 0;
+            @extend .mg-lr;
+
+            // コンタクトインナー
+            .contact-inner {
+                width: 90%;
+                margin: 5%;
+
+                // メインタイトル
+                .main-title {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    @extend .mg-sm;
+                }
+
+                .contact-induction {
+                    font-size: 0.8rem;
+                    margin-bottom: 20px;
+                }
+
+                .contact-list {
+                    display: flex;
+                    justify-content: space-around;
+
+                    .contact-method {
+                        flex-basis: calc(100% / 3 - 30px);
+
+                        a {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
