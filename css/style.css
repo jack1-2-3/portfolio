@@ -177,6 +177,11 @@ body {
 #global-container .main-contents #profile {
   width: 90%;
   margin: 5%;
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  opacity: 0;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
 }
 
 #global-container .main-contents #profile .main-title {
@@ -219,6 +224,11 @@ body {
 #global-container .main-contents #skills {
   width: 90%;
   margin: 5%;
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  opacity: 0;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
 }
 
 #global-container .main-contents #skills .main-title {
@@ -250,6 +260,11 @@ body {
 #global-container .main-contents #works .works-inner {
   width: 90%;
   margin: 5%;
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  opacity: 0;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
 }
 
 #global-container .main-contents #works .works-inner .main-title {
@@ -309,6 +324,11 @@ body {
 #global-container .main-contents #portfolio {
   width: 90%;
   margin: 5%;
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  opacity: 0;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
 }
 
 #global-container .main-contents #portfolio .portfolio-inner .main-title {
@@ -333,6 +353,11 @@ body {
 #global-container .main-contents #contact .contact-inner {
   width: 90%;
   margin: 5%;
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  opacity: 0;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
 }
 
 #global-container .main-contents #contact .contact-inner .main-title {
@@ -401,5 +426,25 @@ body {
           transition-delay: 140ms;
   -webkit-transform: translateY(-16px) rotate(135deg);
           transform: translateY(-16px) rotate(135deg);
+}
+
+#global-container .main-contents .inview#profile,
+#global-container .main-contents .inview#skills,
+#global-container .main-contents .inview#portfolio {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+}
+
+#global-container .main-contents .inview#works .works-inner {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+}
+
+#global-container .main-contents .inview#contact .contact-inner {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

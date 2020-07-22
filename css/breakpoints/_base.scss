@@ -107,6 +107,9 @@ body {
             @extend .mg-lr;
             width: 90%;
             margin: 5%;
+            transform: translateY(80px);
+            opacity: 0;
+            transition: 2s ease;
     
             // メインタイトル
             .main-title {
@@ -147,6 +150,9 @@ body {
             @extend .mg-lr;
             width: 90%;
             margin: 5%;
+            transform: translateY(80px);
+            opacity: 0;
+            transition: 2s ease;
 
             .main-title {
                 font-size: 1.5rem;
@@ -178,6 +184,9 @@ body {
             .works-inner {
                 width: 90%;
                 margin: 5%;
+                transform: translateY(80px);
+                opacity: 0;
+                transition: 2s ease;
 
                 // メインタイトル
                 .main-title {
@@ -245,6 +254,9 @@ body {
             width: 90%;
             margin: 5%;
             @extend .mg-lr;
+            transform: translateY(80px);
+            opacity: 0;
+            transition: 2s ease;
 
             // ポートフォリオインナー
             .portfolio-inner {
@@ -276,11 +288,15 @@ body {
             padding: 10px 0;
             @extend .mg-lr;
             margin-bottom: 0;
+            
 
             // コンタクトインナー
             .contact-inner {
                 width: 90%;
                 margin: 5%;
+                transform: translateY(80px);
+                opacity: 0;
+                transition: 2s ease;
 
                 // メインタイトル
                 .main-title {
@@ -316,6 +332,7 @@ body {
     .footer {
         background-color: #f8e4e4;
 
+
         // コピーライト
         .copyright {
             font-size: 0.6rem;
@@ -348,6 +365,32 @@ body {
         & > span:nth-child(3) {
             transition-delay: 140ms;
             transform: translateY(-16px) rotate(135deg);
+        }
+    }
+}
+
+// inviewアニメーション
+#global-container {
+    .main-contents {
+        .inview#profile,
+        .inview#skills,
+        .inview#portfolio {
+            transform: none;
+            opacity: 1;
+        }
+
+        .inview#works {
+            .works-inner {
+                transform: none;
+                opacity: 1;
+            }
+        }
+
+        .inview#contact {
+            .contact-inner {
+                transform: none;
+                opacity: 1;
+            }
         }
     }
 }
