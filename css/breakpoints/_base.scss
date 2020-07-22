@@ -43,6 +43,11 @@ body {
             .header-nav__item {
                 margin-bottom: 20px;
                 margin-right: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: $cBlack;
+                }
             }
         }
 
@@ -69,6 +74,7 @@ body {
         visibility: hidden;
         background-color: rgba(#000, 0.3);
         z-index: 10;
+        cursor: pointer;
     }
 
     // ハンバーガーメニュー
@@ -77,6 +83,7 @@ body {
         right: 20px;
         top: 20px;
         z-index: 3;
+        cursor: pointer;
 
         & > span {
             display: block;

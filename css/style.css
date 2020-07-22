@@ -123,6 +123,11 @@ body {
   margin-right: 20px;
 }
 
+.header .header-nav .header-nav__inner .header-nav__item a {
+  text-decoration: none;
+  color: black;
+}
+
 .header .header-nav .menu-open.header-nav__inner {
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -144,6 +149,7 @@ body {
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 10;
+  cursor: pointer;
 }
 
 #global-container .hamburger-menu {
@@ -151,6 +157,7 @@ body {
   right: 20px;
   top: 20px;
   z-index: 3;
+  cursor: pointer;
 }
 
 #global-container .hamburger-menu > span {
