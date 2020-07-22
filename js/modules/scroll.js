@@ -20,12 +20,12 @@ class ScrollObserver {
             entries.forEach(entry => {
                 if(entry.isIntersecting) {
                     // cbコールバック
-                    this.cb(entry.target, true);
+                    this.cb(entry.target,entry.isIntersecting);
                     if(this.once) {
                         observer.unobserve(entry.target);
                     }
                 } else {
-                    this.cb(entry.target,false);
+                    this.cb(entry.target, entry.isIntersecting);
                 }
             })
         }
