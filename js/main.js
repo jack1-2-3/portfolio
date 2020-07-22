@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    new Main;
-})
+    new Main();
+});
 
 class Main {
     constructor() {
         this.init = this._init();
-        this._observers = [];
         this.scrollinit = this._scrollInit();
     }
 
@@ -14,10 +13,6 @@ class Main {
         this.hero = new HeroSlider('.swiper-container');
     }
 
-    // オブザーバー　セッター
-    set observers(val) {
-        this._observers.push(val);
-    }
 
     // inviewアニメーション
     _inviewAnimation(el, inview) {
@@ -40,13 +35,13 @@ class Main {
     // スクロール感知
     _scrollInit() {
         // inviewアニメーション
-        this.observers = new ScrollObserver('#profile', this._inviewAnimation);
-        this.observers = new ScrollObserver('#skills', this._inviewAnimation);
-        this.observers = new ScrollObserver('#portfolio', this._inviewAnimation);
-        this.observers = new ScrollObserver('#works', this._inviewAnimation);
-        this.observers = new ScrollObserver('#contact', this._inviewAnimation);
+        new ScrollObserver('#profile', this._inviewAnimation);
+        new ScrollObserver('#skills', this._inviewAnimation);
+        new ScrollObserver('#portfolio', this._inviewAnimation);
+        new ScrollObserver('#works', this._inviewAnimation);
+        new ScrollObserver('#contact', this._inviewAnimation);
 
         // スライダー
-        this.observers = new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this));
+        new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false});
     }
 }
