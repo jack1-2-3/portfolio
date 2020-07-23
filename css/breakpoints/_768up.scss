@@ -1,0 +1,73 @@
+// ヘッダー
+.header {
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    .header-nav {
+        background-color: gray;
+        margin-top: 0;
+        justify-content: center;
+        padding: 30px 0;
+
+        .header-nav__inner {
+            flex-direction: row;
+            transform: none;
+            opacity: 1;
+            
+        }
+    }
+}
+
+// triggeredが付与されたときのヘッダー
+.triggered.header {
+        .header-nav {
+            background-color: rgba(gray, 0.6);
+    }
+}
+
+// グローバルコンテナ
+#global-container {
+    // ハンバーガーメニューを非表示
+    .hamburger-menu {
+        display: none;
+    }
+
+    // メインコンテンツ
+    .main-contents {
+        // 仕事内容
+        #works {
+            .works-inner {
+                max-width: 1280px;
+                margin: auto;
+                .works-list {
+                    flex-direction: row;
+
+                    .works-container {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        // コンタクト
+        #contact {
+            margin-bottom: 0;
+
+            .contact-inner {
+                max-width: 1280px;
+                margin: auto;
+
+                .contact-list {
+                    justify-content: center;
+                    
+                    .contact-method {
+                        flex-basis: 10%;
+                        max-width: 100px;
+                        margin: 0 50px;
+                    }
+                }
+            }
+        }
+    }
+}

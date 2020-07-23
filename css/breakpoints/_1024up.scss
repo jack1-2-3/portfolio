@@ -1,0 +1,61 @@
+// 全体のフォントサイズ
+:root {
+    font-size: 44px;
+}
+
+// グローバルコンテナ
+#global-container {
+    .hamburger-menu {
+        display: none;
+    }
+
+    // メインコンテンツ
+    .main-contents{
+        // プロフィール
+        #profile{
+            margin: auto;
+            max-width: 1280px;
+
+            .profile-inner {
+                flex-direction: row;
+                justify-content: space-around;
+
+                .profile-icon__wrap {
+                    width: 35%;
+                }
+
+                .profile-list {
+                    width: 45%;
+                }
+            }
+        }
+
+        // スキル
+        #skills{
+            margin: auto;
+            max-width: 1280px;
+        }
+
+        // ポートフォリオ
+        #portfolio {
+            margin: auto;
+            max-width: 1280px;
+            
+            .portfolio-inner {
+                
+
+                .sub-title {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    // フッター
+    .footer {
+        .copyright {
+            max-width: 1280px;
+            margin: auto;
+        }
+    }
+}
