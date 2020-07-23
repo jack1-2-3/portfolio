@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 class Main {
     constructor() {
+        this.header = document.querySelector('.header');
         this.init = this._init();
         this.scrollinit = this._scrollInit();
     }
@@ -32,6 +33,14 @@ class Main {
         }
     }
 
+    _toggleTriggered(el, inview) {
+        if(inview) {
+            this.header.classList.remove('triggered');
+        } else {
+            this.header.classList.add('triggered');
+        }
+    }
+
     // スクロール感知
     _scrollInit() {
         // inviewアニメーション
@@ -43,5 +52,8 @@ class Main {
 
         // スライダー
         new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false});
+
+        // ヘッダーtriggered
+        new ScrollObserver('.header-scroll', this._toggleTriggered.bind(this), {once: false});
     }
 }
