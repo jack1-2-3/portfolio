@@ -11,7 +11,7 @@
           transform: translate(-50%, -50%);
   z-index: 50;
   color: white;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   text-shadow: 2px  2px 1px #003366, -2px  2px 1px #003366, 2px -2px 1px #003366, -2px -2px 1px #003366, 2px  0px 1px #003366, 0px  2px 1px #003366, -2px  0px 1px #003366, 0px -2px 1px #003366;
 }
 
@@ -84,6 +84,9 @@
 @media (min-width: 1024px) {
   .hero-slider {
     margin-top: 120px;
+  }
+  .hero-slider .swiper-container .main-title {
+    font-size: 1.5rem;
   }
   .hero-slider .swiper-container .scroll-induction h3 {
     font-size: 0.5rem;
