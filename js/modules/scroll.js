@@ -6,7 +6,7 @@ class ScrollObserver {
         this.options = Object.assign({
             root: null,
             rootmargin: '0px',
-            threshold: 0.3,
+            threshold: 0,
             once: true
         }, options);
         this.once = this.options.once;

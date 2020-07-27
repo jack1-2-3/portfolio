@@ -44,7 +44,7 @@ class Main {
     // スクロール感知
     _scrollInit() {
         // inviewアニメーション
-        new ScrollObserver('.inview-animation', this._inviewAnimation);
+        new ScrollObserver('.inview-animation', this._inviewAnimation, {threshold: 0.5});
 
         // スライダー
         new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false});
