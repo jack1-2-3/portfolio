@@ -319,12 +319,21 @@ body {
                     justify-content: space-around;
 
                     .contact-method {
-                        flex-basis: calc(100% / 3 - 80px);
+                        flex-basis: calc(100% / 4 - 80px);
                         max-width: 100px;
 
                         a {
                             img {
                                 width: 100%;
+                            }
+                        }
+                    }
+
+                    .contact-method:last-child {
+                        a {
+                            img {
+                                height: 100%;
+                                object-fit: cover;
                             }
                         }
                     }

@@ -409,13 +409,19 @@ body {
 }
 
 #global-container .main-contents #contact .contact-inner .contact-list .contact-method {
-  -ms-flex-preferred-size: calc(100% / 3 - 80px);
-      flex-basis: calc(100% / 3 - 80px);
+  -ms-flex-preferred-size: calc(100% / 4 - 80px);
+      flex-basis: calc(100% / 4 - 80px);
   max-width: 100px;
 }
 
 #global-container .main-contents #contact .contact-inner .contact-list .contact-method a img {
   width: 100%;
+}
+
+#global-container .main-contents #contact .contact-inner .contact-list .contact-method:last-child a img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #global-container .footer {
