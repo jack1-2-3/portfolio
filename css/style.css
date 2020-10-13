@@ -409,8 +409,8 @@ body {
 }
 
 #global-container .main-contents #contact .contact-inner .contact-list .contact-method {
-  -ms-flex-preferred-size: calc(100% / 4 - 80px);
-      flex-basis: calc(100% / 4 - 80px);
+  -ms-flex-preferred-size: calc(100% / 4 - 40px);
+      flex-basis: calc(100% / 4 - 40px);
   max-width: 100px;
 }
 
